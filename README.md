@@ -27,11 +27,11 @@ Activate the environment using the following command: {EnvironmentName}/Scripts/
 
 Then make sure to have the following librarys: 
 
-  -pip install opencv-python
+>pip install opencv-python
   
-  -pip install tensorflow
+>pip install tensorflow
   
-  -pip install ipykernel
+>pip install ipykernel
   
 Environment is now set up! It is ready to be used.
 
