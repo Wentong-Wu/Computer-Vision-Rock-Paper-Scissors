@@ -2,7 +2,7 @@
 
 >Creating a Rock, Paper and Scissors game using Computer Vision.
 
-Setting Up The Project
+## Setting Up The Project
 
 Software Used:
 
@@ -18,7 +18,7 @@ Software Used:
 
 Virtual environment is a version control system which seperates from each environment
 
-Setting Up Virtual Environment
+## Setting Up Virtual Environment
 
 Created the Virtual Environment in Visual Studio Code using the terminal with the following command line:Python3 -m venv {EnvironmentName}.
 
