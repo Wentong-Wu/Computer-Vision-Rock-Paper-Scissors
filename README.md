@@ -20,7 +20,8 @@ Software Used:
 
 ## Setting Up Virtual Environment
 
-Created the Virtual Environment in Visual Studio Code using the terminal with the following command line:Python3 -m venv {EnvironmentName}.
+Created the Virtual Environment in Visual Studio Code using the terminal with the following command line:
+>Python3 -m venv {EnvironmentName}.
 
 Activate the environment using the following command: {EnvironmentName}/Scripts/activate. This activates the environment which means that you are currently using the version of the environment you just activated.
 
