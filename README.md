@@ -6,6 +6,8 @@
 
 Software Used:
 
+>Virtual environment is a version control system which seperates from each environment
+
 -Visual Studio Code
 
 -Ubuntu
@@ -15,8 +17,6 @@ Software Used:
 -Tensorflow
 
 -Download Keras Model and Add Labels for Rock, Paper, Scissors and nothing
-
-Virtual environment is a version control system which seperates from each environment
 
 ## Setting Up Virtual Environment
 
