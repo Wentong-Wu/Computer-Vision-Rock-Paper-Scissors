@@ -2,9 +2,9 @@
 
 >Creating a Rock, Paper and Scissors game using Computer Vision.
 
-##Setting Up The Project
+Setting Up The Project
 
->Software Used:
+Software Used:
 
 -Visual Studio Code
 -Ubuntu
@@ -12,7 +12,7 @@
 -Tensorflow
 -Download Keras Model and Add Labels for Rock, Paper, Scissors and nothing
 
->Virtual environment is a version control system which seperates from each environment
+Virtual environment is a version control system which seperates from each environment
 
 Setting Up Virtual Environment
 
@@ -27,7 +27,7 @@ Then make sure to have the following librarys:
   
 Environment is now set up! It is ready to be used.
 
->Firstly, I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model.
+Firstly, I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model.
 ```python
 import cv2
 from keras.models import load_model
