@@ -13,7 +13,7 @@ Virtual environment is a version control system which seperates from each enviro
 Setting Up Virtual Environment
 Created the Virtual Environment in Visual Studio Code using the terminal with the following command line:Python3 -m venv {EnvironmentName}.
 Activate the environment using the following command: {EnvironmentName}/Scripts/activate. This activates the environment which means that you are currently using the version of the environment you just activated.
-Then make sure to have the following librarys:
+Then make sure to have the following librarys: 
   pip install opencv-python
   pip install tensorflow
   pip install ipykernel
