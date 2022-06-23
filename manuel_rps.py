@@ -41,6 +41,9 @@ def get_winner(Human_Choice, AI_Choice):
         print("Draw!")
     pass
 
+def play():
+    get_winner(get_user_choice(), get_computer_choice())
+    pass
 if __name__ == "__main__":
-    get_winner(get_user_choice(), get_computer_choice()) 
+    play()
     pass
