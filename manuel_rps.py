@@ -1,5 +1,7 @@
+from datetime import time, timedelta
 import random
 from random import randint
+import  time
 import camera_rps
 from camera_rps import get_prediction
 
@@ -10,6 +12,10 @@ def get_computer_choice(AI_Choice = "nothing"):
     return AI_Choice
 
 def get_user_choice(Human_Choice = "nothing"):
+    cdTime = float(3.0)
+    startTime = time.time()
+    while (time.time() - startTime) < cdTime:
+        print(time.time()-startTime)
     return get_prediction()
     """
     Human_Option = ["Rock","Paper","Scissors"]
