@@ -12,10 +12,7 @@ def get_computer_choice(AI_Choice = "nothing"):
     return AI_Choice
 
 def get_user_choice(Human_Choice = "nothing"):
-    cdTime = float(3.0)
-    startTime = time.time()
-    while (time.time() - startTime) < cdTime:
-        print(time.time()-startTime)
+    
     return get_prediction()
     """
     Human_Option = ["Rock","Paper","Scissors"]
@@ -40,9 +37,9 @@ def get_winner(Human_Choice, AI_Choice):
     pass
 
 def play():
-    get_winner(get_user_choice(), get_computer_choice())
+    comp_choice = get_computer_choice()
+    user_choice = get_user_choice()
+    get_winner(user_choice, comp_choice)
     pass
 
-if __name__ == "__main__":
-    play()
-    pass
+play()
