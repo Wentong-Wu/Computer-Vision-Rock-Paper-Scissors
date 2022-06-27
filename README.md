@@ -87,7 +87,7 @@ def get_user_choice(Human_Choice = "nothing"):
     pass
 ```
 
-get_winner is a function which requires 2 str arguments (A human choice and a computer choice).
+get_winner is a function which requires 2 str arguments (A human choice and a computer choice) and prints out the winner.
 ```python
 def get_winner(Human_Choice, AI_Choice):
     print("Human Choice: ",Human_Choice)
