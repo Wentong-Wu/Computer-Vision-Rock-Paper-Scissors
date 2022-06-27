@@ -10,8 +10,6 @@ Software Used:
 
 -Visual Studio Code
 
--Ubuntu
-
 -Python
 
 -Tensorflow
