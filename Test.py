@@ -6,10 +6,10 @@ import time
 model = load_model('keras_model.h5')
 cap = cv2.VideoCapture(0)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
-
-cdTime = float(3.0)
+cdTime = float(4.0)
 startTime = time.time()
 while (time.time() - startTime) < cdTime:
+    print(int(time.time()-startTime))
     ret, frame = cap.read()
     resized_frame = cv2.resize(frame, (224, 224), interpolation = cv2.INTER_AREA)
     image_np = np.array(resized_frame)
@@ -28,7 +28,7 @@ while (time.time() - startTime) < cdTime:
     
     cv2.imshow('frame', frame)
     # Press q to close the window
-    print(prediction)
+    #print(prediction)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
             
