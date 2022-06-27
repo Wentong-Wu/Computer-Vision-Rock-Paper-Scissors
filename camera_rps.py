@@ -1,10 +1,13 @@
 import Test
 from Test import prediction
 
-def get_prediction():
-    print("prediction")
-    pass
-
-if __name__ == "__main__":
-    get_prediction()
+def get_prediction(predict = ""):
+    if prediction[0][0] > 0.5:
+        return('Rock')
+    elif prediction[0][1] > 0.5:
+        return('Paper')
+    elif prediction[0][2] > 0.5:
+        return('Scissors')
+    else:
+        return('Nothing')
     pass

@@ -1,5 +1,7 @@
 import random
 from random import randint
+import camera_rps
+from camera_rps import get_prediction
 
 def get_computer_choice(AI_Choice = "nothing"):
     #Create a list of options and use random.choice and return the value
@@ -8,6 +10,8 @@ def get_computer_choice(AI_Choice = "nothing"):
     return AI_Choice
 
 def get_user_choice(Human_Choice = "nothing"):
+    return get_prediction()
+    """
     Human_Option = ["Rock","Paper","Scissors"]
     while True:
         Human_Choice = input("Enter Choice (Rock/Paper/Scissors): ")
@@ -15,6 +19,7 @@ def get_user_choice(Human_Choice = "nothing"):
             print("Choice not valid.")
         else:
             return Human_Choice
+            """
     pass
 
 def get_winner(Human_Choice, AI_Choice):
@@ -31,6 +36,7 @@ def get_winner(Human_Choice, AI_Choice):
 def play():
     get_winner(get_user_choice(), get_computer_choice())
     pass
+
 if __name__ == "__main__":
     play()
     pass
