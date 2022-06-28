@@ -1,18 +1,24 @@
-from datetime import time, timedelta
 import random
 from random import randint
-import  time
-import camera_rps
-from camera_rps import get_prediction
 
+def get_prediction(prediction):
+    if prediction[0][0] > 0.5:
+        return('Rock')
+    elif prediction[0][1] > 0.5:
+        return('Paper')
+    elif prediction[0][2] > 0.5:
+        return('Scissors')
+    else:
+        return('Nothing')
+    
 def get_computer_choice(AI_Choice = "nothing"):
     #Create a list of options and use random.choice and return the value
     AI_Options = ["Rock", "Paper", "Scissors"]
     AI_Choice = random.choice(AI_Options)
     return AI_Choice
 
-def get_user_choice(Human_Choice = "nothing"):
-    return get_prediction()
+def get_user_choice(predict):
+    return get_prediction(predict)
     """
     Human_Option = ["Rock","Paper","Scissors"]
     while True:
@@ -35,29 +41,9 @@ def get_winner(Human_Choice, AI_Choice, winner="nothing"):
         return("Draw!")
     pass
 
-def play():
-    rounds_played = 0
-    user_score = 0
-    ai_score = 0
-    while rounds_played < 3:
-        comp_choice = get_computer_choice()
-        user_choice = get_user_choice()
-        winner = get_winner(user_choice, comp_choice)
-        if winner != "Draw!":
-            rounds_played += 1
-            if winner == "Human Won":
-                user_score += 1
-            if winner == "AI Won":
-                ai_score += 1
-        if user_score == 2:
-            print("You WIN!!!!")
-            break
-        if ai_score == 2:
-            print("You LOSE!!!!")
-            break
-    print("User Score: ",user_score)
-    print("AI Score: ", ai_score)
-    pass
-
-if __name__ == "__main__":
-    play()
+def play(prediction, winner=""):
+    comp_choice = get_computer_choice()
+    user_choice = get_user_choice(prediction)
+    winner = get_winner(user_choice, comp_choice)
+    print(winner)
+    return winner
