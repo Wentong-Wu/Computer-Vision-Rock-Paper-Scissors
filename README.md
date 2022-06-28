@@ -4,6 +4,8 @@
 
 # Controls
 
+>Must have a camera to play
+
 >Press a to start the game.
 
 >Use the camera to determine your input.
