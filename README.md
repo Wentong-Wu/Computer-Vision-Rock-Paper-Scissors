@@ -4,7 +4,7 @@
 
 # Controls
 
->Must have a camera to play
+>Must have a camera to play.
 
 >Press a to start the game.
 
@@ -43,7 +43,7 @@ Then make sure to have the following librarys:
   
 Environment is now set up! It is ready to be used.
 
-Firstly, I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model. 
+I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model. 
 
 >Make sure camera is not in use before running the code else it cannot detect if a camera exists. And make sure you have a camera
 
