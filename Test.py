@@ -43,11 +43,11 @@ while True:
                 gameRound += 1
             stopGame = True
         if stopGame == True:
-            if human_score == 2:
+            if human_score == 3:
                 print("You Win!")
                 stopGame = False
                 startGame = False
-            elif ai_score == 2:
+            elif ai_score == 3:
                 print("You Lose!")
                 stopGame = False
                 startGame = False
