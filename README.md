@@ -5,7 +5,9 @@
 # Controls
 
 >Press a to start the game.
+
 >Use the camera to determine your input.
+
 >For each round you play, press n to go to the next round.
 
 ## Setting Up The Project
