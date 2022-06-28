@@ -33,33 +33,8 @@ Then make sure to have the following librarys:
   
 Environment is now set up! It is ready to be used.
 
-Firstly, I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model.
-```python
-import cv2
-from keras.models import load_model
-import numpy as np
-model = load_model('keras_model.h5')
-cap = cv2.VideoCapture(0)
-data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+Firstly, I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model. >Make sure camera is not in use before running else it cannot detect if a camera exists.
 
-while True: 
-    ret, frame = cap.read()
-    resized_frame = cv2.resize(frame, (224, 224), interpolation = cv2.INTER_AREA)
-    image_np = np.array(resized_frame)
-    normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
-    data[0] = normalized_image
-    prediction = model.predict(data)
-    cv2.imshow('frame', frame)
-    # Press q to close the window
-    print(prediction)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-            
-# After the loop release the cap object
-cap.release()
-# Destroy all the windows
-cv2.destroyAllWindows()
-```
 
 Created a manual rock paper scissors game in python with 3 functions: get_computer_choice, get_user_choice and get_winner.
 get_computer_choice is a function which returns either Rock, Paper or Scissors using the random method.
