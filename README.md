@@ -33,7 +33,9 @@ Then make sure to have the following librarys:
   
 Environment is now set up! It is ready to be used.
 
-Firstly, I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model. >Make sure camera is not in use before running else it cannot detect if a camera exists.
+Firstly, I created a new python file named it 'Test.py' this file is used to test to see if the keras model has set up correctly and working using the Keras Model. 
+
+>Make sure camera is not in use before running else it cannot detect if a camera exists.
 
 
 Created a manual rock paper scissors game in python with 3 functions: get_computer_choice, get_user_choice and get_winner.
