@@ -46,10 +46,16 @@ while True:
             if human_score == 3:
                 print("You Win!")
                 stopGame = False
+                human_score = 0
+                ai_score = 0
+                gameRound = 0
                 startGame = False
             elif ai_score == 3:
                 print("You Lose!")
                 stopGame = False
+                human_score = 0
+                ai_score = 0
+                gameRound = 0
                 startGame = False
             print("Press 'n' for next match")
             if cv2.waitKey(33) == ord('n'):
