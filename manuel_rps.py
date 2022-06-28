@@ -19,16 +19,6 @@ def get_computer_choice(AI_Choice = "nothing"):
 
 def get_user_choice(predict):
     return get_prediction(predict)
-    """
-    Human_Option = ["Rock","Paper","Scissors"]
-    while True:
-        Human_Choice = input("Enter Choice (Rock/Paper/Scissors): ")
-        if Human_Choice not in Human_Option:
-            print("Choice not valid.")
-        else:
-            return Human_Choice
-            """
-    pass
 
 def get_winner(Human_Choice, AI_Choice, winner="nothing"):
     print("Human Choice: ",Human_Choice)
@@ -39,7 +29,6 @@ def get_winner(Human_Choice, AI_Choice, winner="nothing"):
         return("AI Won")
     else:
         return("Draw!")
-    pass
 
 def play(prediction, winner=""):
     comp_choice = get_computer_choice()

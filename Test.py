@@ -4,7 +4,6 @@ import cv2
 from keras.models import load_model
 import numpy as np
 import time
-import keyword
 from manuel_rps import play
 
 model = load_model('keras_model.h5')
@@ -59,7 +58,6 @@ while True:
     #End of the game
     cv2.imshow('frame', frame)
     # Press q to close the window
-    #print(prediction)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
             
