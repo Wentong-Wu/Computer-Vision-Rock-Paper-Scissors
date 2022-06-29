@@ -20,7 +20,7 @@ def get_computer_choice(AI_Choice = "nothing"):
 def get_user_choice(predict):
     return get_prediction(predict)
 
-def get_winner(Human_Choice, AI_Choice, winner="nothing"):
+def get_winner(Human_Choice, AI_Choice):
     print("Human Choice: ",Human_Choice)
     print("AI Choice: ",AI_Choice)
     if Human_Choice == "Rock" and AI_Choice == "Scissors" or Human_Choice == "Paper" and AI_Choice == "Rock" or Human_Choice == "Scissors" and AI_Choice == "Paper":
