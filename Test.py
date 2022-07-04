@@ -16,6 +16,11 @@ stopGame = False
 gameRound = 0
 human_score = 0
 ai_score = 0
+org = (50,50)
+font = cv2.FONT_HERSHEY_SIMPLEX
+colour = (255,0,0)
+winner = ''
+gamewinner = ''
 while True:
     #Display the camera
     ret, frame = cap.read()
@@ -24,17 +29,28 @@ while True:
     normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
     data[0] = normalized_image
     prediction = model.predict(data)
+    cv2.putText(frame,f'Round: {gameRound}',(50,100),font,1,colour,2,cv2.LINE_AA)
+    cv2.putText(frame,f'Human won: {human_score}',(50,150),font,1,colour,2,cv2.LINE_AA)
+    cv2.putText(frame,f'Computer won: {ai_score}',(50,200),font,1,colour,2,cv2.LINE_AA)
+    cv2.putText(frame,f'{gamewinner}',(50,250),font,1,colour,2,cv2.LINE_AA)
+    cv2.putText(frame,f'Previous Round: {winner}',(50,300),font,1,colour,2,cv2.LINE_AA)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     #Play the game
     if startGame == False:
-        print("Press 'a' to start game")
+        cv2.putText(frame,'Press (a) to start game',org,font,1,colour,2,cv2.LINE_AA)
     if cv2.waitKey(33) == ord('a') and startGame == False:
+        human_score = 0
+        ai_score = 0
+        gameRound = 0
+        gamewinner = ''
+        winner = ''
         startTime = time.time()
         startGame = True
     if startGame == True:
         currentTime = time.time() - startTime
-        print(currentTime)
+        if int(cdTime - currentTime) > 0:
+            cv2.putText(frame,f'Show hand in: {int(cdTime-currentTime)}',org,font,1,colour,2,cv2.LINE_AA)
         if (currentTime > cdTime) and stopGame == False:
             winner = play(prediction)
             if winner == "Human Won":
@@ -46,20 +62,14 @@ while True:
             stopGame = True
         if stopGame == True:
             if human_score == 3:
-                print("You Win!")
+                gamewinner = 'YOU WIN!'
                 stopGame = False
-                human_score = 0
-                ai_score = 0
-                gameRound = 0
                 startGame = False
             elif ai_score == 3:
-                print("You Lose!")
+                gamewinner = 'YOU LOST!'
                 stopGame = False
-                human_score = 0
-                ai_score = 0
-                gameRound = 0
                 startGame = False
-            print("Press 'n' for next match")
+            cv2.putText(frame,'Press (n) for next round',org,font,1,colour,2,cv2.LINE_AA)
             if cv2.waitKey(33) == ord('n'):
                 startTime = time.time()
                 stopGame = False

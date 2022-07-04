@@ -34,5 +34,4 @@ def play(prediction, winner=""):
     comp_choice = get_computer_choice()
     user_choice = get_user_choice(prediction)
     winner = get_winner(user_choice, comp_choice)
-    print(winner)
     return winner
